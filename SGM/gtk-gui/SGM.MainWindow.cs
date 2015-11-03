@@ -8,11 +8,9 @@ namespace SGM
 		
 		private global::Gtk.Action SGMAction;
 		
-		private global::Gtk.Action Test2Action;
-		
 		private global::Gtk.Action deleteAction;
 		
-		private global::Gtk.Action refreshAction;
+		private global::Gtk.Action restart;
 		
 		private global::Gtk.VBox vbox1;
 		
@@ -27,15 +25,12 @@ namespace SGM
 			this.SGMAction = new global::Gtk.Action ("SGMAction", global::Mono.Unix.Catalog.GetString ("SGM"), null, null);
 			this.SGMAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Test");
 			w1.Add (this.SGMAction, null);
-			this.Test2Action = new global::Gtk.Action ("Test2Action", global::Mono.Unix.Catalog.GetString ("Test2"), null, null);
-			this.Test2Action.ShortLabel = global::Mono.Unix.Catalog.GetString ("Test2");
-			w1.Add (this.Test2Action, null);
 			this.deleteAction = new global::Gtk.Action ("deleteAction", global::Mono.Unix.Catalog.GetString ("Beenden"), null, "gtk-delete");
 			this.deleteAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Beenden");
 			w1.Add (this.deleteAction, null);
-			this.refreshAction = new global::Gtk.Action ("refreshAction", global::Mono.Unix.Catalog.GetString ("Neustarten"), null, "gtk-refresh");
-			this.refreshAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Neustarten");
-			w1.Add (this.refreshAction, null);
+			this.restart = new global::Gtk.Action ("restart", global::Mono.Unix.Catalog.GetString ("Neustarten"), null, "gtk-refresh");
+			this.restart.ShortLabel = global::Mono.Unix.Catalog.GetString ("Neustarten");
+			w1.Add (this.restart, null);
 			this.UIManager.InsertActionGroup (w1, 0);
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "SGM.MainWindow";
@@ -46,7 +41,7 @@ namespace SGM
 			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='SGMAction' action='SGMAction'><menuitem name='deleteAction' action='deleteAction'/><menuitem name='refreshAction' action='refreshAction'/></menu></menubar></ui>");
+			this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='SGMAction' action='SGMAction'><menuitem name='deleteAction' action='deleteAction'/></menu></menubar></ui>");
 			this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
 			this.menubar1.Name = "menubar1";
 			this.vbox1.Add (this.menubar1);
@@ -61,6 +56,7 @@ namespace SGM
 			this.DefaultWidth = 503;
 			this.DefaultHeight = 300;
 			this.Show ();
+			this.deleteAction.Activated += new global::System.EventHandler (this.shutdown);
 		}
 	}
 }

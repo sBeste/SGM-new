@@ -9,6 +9,11 @@ namespace SGM
 		{
 			this.Build ();
 		}
+
+		protected void shutdown (object sender, EventArgs e)
+		{
+			System.Environment.Exit(1);
+		}
 	}
 }
 
