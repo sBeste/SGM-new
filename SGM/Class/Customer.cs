@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SGM
 {
@@ -7,6 +8,7 @@ namespace SGM
 		public string Name {get; private set;}
 		public string FirstName {get; private set;}
 		public double CreditBalance {get; private set;}
+		public List<Order> OrderList;
 
 		public Customer (string FirstName, string Name, double CreditBalance)
 		{
