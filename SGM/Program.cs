@@ -8,8 +8,8 @@ namespace SGM
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			MainWindow win = new MainWindow ();
-			win.Show ();
+			MainWindow window = new MainWindow ();
+			window.Show ();
 			Application.Run ();
 		}
 	}
