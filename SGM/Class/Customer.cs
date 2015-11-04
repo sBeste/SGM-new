@@ -15,7 +15,7 @@ namespace SGM
 			this.CreditBalance = CreditBalance;
 		}
 
-		public double pay(double amount) {
+		public double pay (double amount) {
 			this.CreditBalance = this.CreditBalance - amount;
 
 			return this.CreditBalance;
