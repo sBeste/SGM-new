@@ -1,4 +1,3 @@
 language: csharp
-solution: SGM.sln
 script:
   - xbuild /p:Configuration=Release SGM/SGM.sln
