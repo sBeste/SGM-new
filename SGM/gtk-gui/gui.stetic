@@ -19,14 +19,12 @@
         <property name="Label" translatable="yes">Beenden</property>
         <property name="ShortLabel" translatable="yes">Beenden</property>
         <property name="StockId">gtk-delete</property>
-        <signal name="Activated" handler="shutdown" />
       </action>
       <action id="restart">
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Neustarten</property>
         <property name="ShortLabel" translatable="yes">Neustarten</property>
         <property name="StockId">gtk-refresh</property>
-        <signal name="Activated" handler="clicked" />
       </action>
     </action-group>
     <property name="MemberName" />
