@@ -73,6 +73,8 @@
     <Compile Include="Class\Cashdesk.cs" />
     <Compile Include="CustomerCreate.cs" />
     <Compile Include="gtk-gui\SGM.CustomerCreate.cs" />
+    <Compile Include="CashdeskWindow.cs" />
+    <Compile Include="gtk-gui\SGM.CashdeskWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

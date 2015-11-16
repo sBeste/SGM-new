@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace SGM
 {
@@ -14,6 +15,12 @@ namespace SGM
 		{
 			CustomerCreate customerCreate = new CustomerCreate ();
 			customerCreate.Show ();
+		}
+
+		protected void onCreateCashdeskClicked (object sender, EventArgs e)
+		{
+			CashdeskWindow cW = new CashdeskWindow();
+			cW.Show ();
 		}
 	}
 }

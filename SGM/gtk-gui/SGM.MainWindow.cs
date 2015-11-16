@@ -21,6 +21,8 @@ namespace SGM
 		private global::Gtk.VBox vbox2;
 		
 		private global::Gtk.Button createCustomer;
+		
+		private global::Gtk.Button createCashdesk;
 
 		protected virtual void Build ()
 		{
@@ -69,17 +71,28 @@ namespace SGM
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
-			this.hbox2.Add (this.vbox2);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.vbox2]));
-			w3.Position = 0;
+			// Container child vbox2.Gtk.Box+BoxChild
+			this.createCashdesk = new global::Gtk.Button ();
+			this.createCashdesk.CanFocus = true;
+			this.createCashdesk.Name = "createCashdesk";
+			this.createCashdesk.UseUnderline = true;
+			this.createCashdesk.Label = global::Mono.Unix.Catalog.GetString ("Neue Kasse erstellen");
+			this.vbox2.Add (this.createCashdesk);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.createCashdesk]));
+			w3.Position = 1;
 			w3.Expand = false;
 			w3.Fill = false;
-			this.hbox1.Add (this.hbox2);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.hbox2]));
+			this.hbox2.Add (this.vbox2);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.vbox2]));
 			w4.Position = 0;
+			w4.Expand = false;
+			w4.Fill = false;
+			this.hbox1.Add (this.hbox2);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.hbox2]));
+			w5.Position = 0;
 			this.vbox1.Add (this.hbox1);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
-			w5.Position = 1;
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+			w6.Position = 1;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
@@ -88,6 +101,7 @@ namespace SGM
 			this.DefaultHeight = 484;
 			this.Show ();
 			this.createCustomer.Clicked += new global::System.EventHandler (this.onCreateCustomerClicked);
+			this.createCashdesk.Clicked += new global::System.EventHandler (this.onCreateCashdeskClicked);
 		}
 	}
 }
