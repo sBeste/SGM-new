@@ -114,6 +114,7 @@
   <widget class="Gtk.Window" id="SGM.CustomerCreate" design-size="400 300">
     <property name="MemberName" />
     <property name="Title" translatable="yes">CustomerCreate</property>
+    <property name="Icon">stock:gtk-add Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <child>
       <widget class="Gtk.VBox" id="vbox3">
