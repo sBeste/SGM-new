@@ -5,21 +5,21 @@ namespace SGM
 	public partial class MainWindow
 	{
 		private global::Gtk.UIManager UIManager;
-
+		
 		private global::Gtk.Action SGMAction;
-
+		
 		private global::Gtk.Action deleteAction;
-
+		
 		private global::Gtk.Action restart;
-
+		
 		private global::Gtk.VBox vbox1;
-
+		
 		private global::Gtk.HBox hbox1;
-
+		
 		private global::Gtk.HBox hbox2;
-
+		
 		private global::Gtk.VBox vbox2;
-
+		
 		private global::Gtk.Button createCustomer;
 
 		protected virtual void Build ()

@@ -12,9 +12,8 @@ namespace SGM
 
 		protected void onCreateCustomerClicked (object sender, EventArgs e)
 		{
-			Customer customer = new Customer("Jannick", "Fahlbusch", 100);
-
-			Console.WriteLine(customer.FirstName);
+			CustomerCreate customerCreate = new CustomerCreate ();
+			customerCreate.Show ();
 		}
 	}
 }

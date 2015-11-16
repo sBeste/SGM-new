@@ -50,6 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="libstetic">
+      <HintPath>..\..\..\..\..\..\..\usr\lib\monodevelop\AddIns\MonoDevelop.GtkCore\libstetic.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -68,6 +71,8 @@
     <Compile Include="Class\Bill.cs" />
     <Compile Include="Class\Order.cs" />
     <Compile Include="Class\Cashdesk.cs" />
+    <Compile Include="CustomerCreate.cs" />
+    <Compile Include="gtk-gui\SGM.CustomerCreate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
