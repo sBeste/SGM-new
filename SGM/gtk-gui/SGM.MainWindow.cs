@@ -5,18 +5,22 @@ namespace SGM
 	public partial class MainWindow
 	{
 		private global::Gtk.UIManager UIManager;
-		
+
 		private global::Gtk.Action SGMAction;
-		
+
 		private global::Gtk.Action deleteAction;
-		
+
 		private global::Gtk.Action restart;
-		
+
 		private global::Gtk.VBox vbox1;
-		
-		private global::Gtk.MenuBar menubar1;
-		
-		private global::Gtk.Fixed fixed1;
+
+		private global::Gtk.HBox hbox1;
+
+		private global::Gtk.HBox hbox2;
+
+		private global::Gtk.VBox vbox2;
+
+		private global::Gtk.Button createCustomer;
 
 		protected virtual void Build ()
 		{
@@ -40,25 +44,42 @@ namespace SGM
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child SGM.MainWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
+			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='SGMAction' action='SGMAction'><menuitem name='deleteAction' action='deleteAction'/></menu></menubar></ui>");
-			this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
-			this.menubar1.Name = "menubar1";
-			this.vbox1.Add (this.menubar1);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.menubar1]));
+			this.hbox1 = new global::Gtk.HBox ();
+			this.hbox1.Name = "hbox1";
+			this.hbox1.Spacing = 6;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.hbox2 = new global::Gtk.HBox ();
+			this.hbox2.Name = "hbox2";
+			this.hbox2.Spacing = 6;
+			// Container child hbox2.Gtk.Box+BoxChild
+			this.vbox2 = new global::Gtk.VBox ();
+			this.vbox2.Name = "vbox2";
+			this.vbox2.Spacing = 6;
+			// Container child vbox2.Gtk.Box+BoxChild
+			this.createCustomer = new global::Gtk.Button ();
+			this.createCustomer.CanFocus = true;
+			this.createCustomer.Name = "createCustomer";
+			this.createCustomer.UseUnderline = true;
+			this.createCustomer.Label = "Neuen Kunden erstellen";
+			this.vbox2.Add (this.createCustomer);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.createCustomer]));
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
-			// Container child vbox1.Gtk.Box+BoxChild
-			this.fixed1 = new global::Gtk.Fixed ();
-			this.fixed1.Name = "fixed1";
-			this.fixed1.HasWindow = false;
-			this.vbox1.Add (this.fixed1);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.fixed1]));
-			w3.Position = 2;
+			this.hbox2.Add (this.vbox2);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.vbox2]));
+			w3.Position = 0;
 			w3.Expand = false;
 			w3.Fill = false;
+			this.hbox1.Add (this.hbox2);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.hbox2]));
+			w4.Position = 0;
+			this.vbox1.Add (this.hbox1);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+			w5.Position = 1;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
@@ -66,7 +87,7 @@ namespace SGM
 			this.DefaultWidth = 778;
 			this.DefaultHeight = 484;
 			this.Show ();
-			this.deleteAction.Activated += new global::System.EventHandler (this.shutdown);
+			this.createCustomer.Clicked += new global::System.EventHandler (this.onCreateCustomerClicked);
 		}
 	}
 }

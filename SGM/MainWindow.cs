@@ -10,9 +10,11 @@ namespace SGM
 			this.Build ();
 		}
 
-		protected void shutdown (object sender, EventArgs e)
+		protected void onCreateCustomerClicked (object sender, EventArgs e)
 		{
-			System.Environment.Exit(1);
+			Customer customer = new Customer("Jannick", "Fahlbusch", 100);
+
+			Console.WriteLine(customer.FirstName);
 		}
 	}
 }
