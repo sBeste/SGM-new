@@ -15,6 +15,8 @@ namespace SGM
 		private global::Gtk.VBox vbox1;
 		
 		private global::Gtk.MenuBar menubar1;
+		
+		private global::Gtk.Fixed fixed1;
 
 		protected virtual void Build ()
 		{
@@ -38,7 +40,6 @@ namespace SGM
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child SGM.MainWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
-			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='SGMAction' action='SGMAction'><menuitem name='deleteAction' action='deleteAction'/></menu></menubar></ui>");
@@ -49,12 +50,21 @@ namespace SGM
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.fixed1 = new global::Gtk.Fixed ();
+			this.fixed1.Name = "fixed1";
+			this.fixed1.HasWindow = false;
+			this.vbox1.Add (this.fixed1);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.fixed1]));
+			w3.Position = 2;
+			w3.Expand = false;
+			w3.Fill = false;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 503;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 778;
+			this.DefaultHeight = 484;
 			this.Show ();
 			this.deleteAction.Activated += new global::System.EventHandler (this.shutdown);
 		}
